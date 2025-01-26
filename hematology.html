@@ -35,7 +35,30 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+<style>
+    .whatsapp-chat-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .whatsapp-icon {
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      font-size: 24px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .whatsapp-icon:hover {
+      background-color: #20b957;
+      text-decoration: none;
+    }
+  </style>
  
 </head>
 
@@ -45,24 +68,31 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">STETHIX</h1> <span>.VET</span>
+        <h1 class="sitename">STETHIX</h1><span>.VET</span>
       </a>
-
+    
+      <!-- Navigation Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          
           <li><a href="product.html">Products</a></li>
-         
-            
           <li><a href="contact.html">Contact</a></li>
-   
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </ul>
       </nav>
+    
+      <!-- Mobile Nav Toggle -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list" onclick="toggleMenu()"></i>
+    
     </div>
+    
+    <!-- Add this inline script for toggle functionality -->
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navmenu");
+        navMenu.classList.toggle("mobile-active");
+      }
+    </script>
   </header>
 
   <main class="main">
